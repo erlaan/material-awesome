@@ -8,19 +8,19 @@ local rofi_command = 'env /usr/bin/rofi -dpi ' .. get_dpi() .. ' -width ' .. wit
 return {
   -- List of apps to start by default on some actions
   default = {
-    terminal = 'terminator',
+    terminal = 'gnome-terminal',
     rofi = rofi_command,
     lock = 'i3lock-fancy',
-    quake = 'terminator',
+    quake = 'gnome-terminal',
     screenshot = '~/.config/awesome/configuration/utils/screenshot -m',
     region_screenshot = '~/.config/awesome/configuration/utils/screenshot -r',
     delayed_screenshot = 'sleep 10 ; ~/.config/awesome/configuration/utils/screenshot -r',
     
     -- Editing these also edits the default program
     -- associated with each tag/workspace
-    browser = 'vivaldi-stable',
+    browser = 'firefox',
     editor = 'gedit', -- gui text editor
-    social = 'discord',
+    social = 'teamspeak3',
     game = rofi_command,
     files = 'nautilus -w',
     music = rofi_command
