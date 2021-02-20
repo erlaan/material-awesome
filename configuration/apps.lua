@@ -23,11 +23,11 @@ return {
     social = 'teamspeak3',
     game = rofi_command,
     files = 'nautilus -w',
-    music = rofi_command
+    music = rofi_commandr
   },
   -- List of apps to start once on start-up
   run_on_start_up = {
-    'compton --config ' .. filesystem.get_configuration_dir() .. '/configuration/compton.conf',
+    'picom --config ' .. filesystem.get_configuration_dir() .. '/configuration/compton.conf',
     'nm-applet --indicator', -- wifi
     'pa-applet', -- shows an audiocontrol applet in systray when installed.
     --'blueberry-tray', -- Bluetooth tray icon
@@ -35,12 +35,12 @@ return {
     'ibus-daemon --xim', -- Ibus daemon for keyboard
     'scream -u -p 4011 -i virbr1', -- scream audio sink
     'numlockx on', -- enable numlock
-    '/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
+    '/usr/libexec/polkit-gnome-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
     --'/usr/lib/x86_64-linux-gnu/libexec/polkit-kde-authentication-agent-1 & eval $(gnome-keyring-daemon -s --components=pkcs11,secrets,ssh,gpg)', -- credential manager
-    'teamspeak3',
     'steam -silent',
     -- Add applications that need to be killed between reloads
     -- to avoid multipled instances, inside the awspawn script
-    '~/.config/awesome/configuration/awspawn' -- Spawn "dirty" apps that can linger between sessions
+    '~/.config/awesome/configuration/awspawn', -- Spawn "dirty" apps that can linger between sessions
+    'teamspeak3'
   }
 }
