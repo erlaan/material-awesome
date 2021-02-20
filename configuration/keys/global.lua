@@ -2,13 +2,13 @@ local awful = require('awful')
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
-
+local gears = require('gears')
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
 -- Key bindings
 local globalKeys =
-  awful.util.table.join(
+  gears.table.join(
   -- Hotkeys
   awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'show help', group = 'awesome'}),
   -- Tag browsing
@@ -88,7 +88,7 @@ local globalKeys =
     {modkey},
     'Print',
     function()
-      awful.util.spawn_with_shell(apps.default.delayed_screenshot)
+      awful.spawn_with_shell(apps.default.delayed_screenshot)
     end,
     {description = 'Mark an area and screenshot it 10 seconds later (clipboard)', group = 'screenshots (clipboard)'}
   ),
@@ -96,7 +96,7 @@ local globalKeys =
     {},
     'Print',
     function()
-      awful.util.spawn_with_shell(apps.default.screenshot)
+      awful.spawn_with_shell(apps.default.screenshot)
     end,
     {description = 'Take a screenshot of your active monitor and copy it to clipboard', group = 'screenshots (clipboard)'}
   ),
@@ -104,7 +104,7 @@ local globalKeys =
     {'Control'},
     'Print',
     function()
-      awful.util.spawn_with_shell(apps.default.region_screenshot)
+      awful.spawn_with_shell(apps.default.region_screenshot)
     end,
     {description = 'Mark an area and screenshot it to your clipboard', group = 'screenshots (clipboard)'}
   ),
@@ -112,7 +112,7 @@ local globalKeys =
     {modkey},
     'c',
     function()
-      awful.util.spawn(apps.default.editor)
+      awful.spawn(apps.default.editor)
     end,
     {description = 'open a text/code editor', group = 'launcher'}
   ),
@@ -120,7 +120,7 @@ local globalKeys =
     {modkey},
     'b',
     function()
-      awful.util.spawn(apps.default.browser)
+      awful.spawn(apps.default.browser)
     end,
     {description = 'open a browser', group = 'launcher'}
   ),
@@ -352,7 +352,7 @@ local globalKeys =
     {'Control',altkey},
     'space',
     function()
-      awful.util.spawn_with_shell('vm-attach attach')
+      awful.spawn_with_shell('vm-attach attach')
     end
   ),
   -- Emoji picker
@@ -360,7 +360,7 @@ local globalKeys =
     {modkey},
     'e',
     function()
-      awful.util.spawn(apps.default.files)
+      awful.spawn(apps.default.files)
     end,
     {description = 'Open the ibus emoji picker to copy an emoji to your clipboard', group = 'hotkeys'}
   )
@@ -379,7 +379,7 @@ for i = 1, 9 do
     descr_toggle_focus = {description = 'toggle focused client on tag #', group = 'tag'}
   end
   globalKeys =
-    awful.util.table.join(
+    gears.table.join(
     globalKeys,
     -- View tag only.
     awful.key(
