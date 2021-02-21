@@ -21,6 +21,7 @@ require('module.quake-terminal')
 -- Setup all configurations
 require('configuration.client')
 require('configuration.tags')
+require('configuration.init')
 _G.root.keys(require('configuration.keys.global'))
 
 -- Create a wibox for each screen and add it

@@ -1,13 +1,14 @@
 local awful = require('awful')
+local gears = require('gears')
 require('awful.autofocus')
 local beautiful = require('beautiful')
 local hotkeys_popup = require('awful.hotkeys_popup').widget
-local gears = require('gears')
+
 local modkey = require('configuration.keys.mod').modKey
 local altkey = require('configuration.keys.mod').altKey
 local apps = require('configuration.apps')
 -- Key bindings
-local globalKeys =
+globalKeys =
   gears.table.join(
   -- Hotkeys
   awful.key({modkey}, 'F1', hotkeys_popup.show_help, {description = 'show help', group = 'awesome'}),
