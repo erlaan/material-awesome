@@ -1,4 +1,5 @@
 local awful = require('awful')
+local gears = require('gears')
 local wibox = require('wibox')
 local dpi = require('beautiful').xresources.apply_dpi
 local capi = {button = _G.button}
@@ -112,7 +113,7 @@ local TagList = function(s)
   return awful.widget.taglist(
     s,
     awful.widget.taglist.filter.all,
-    awful.util.table.join(
+    gears.table.join(
       awful.button(
         {},
         1,

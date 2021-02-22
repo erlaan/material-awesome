@@ -1,4 +1,5 @@
 local awful = require('awful')
+local gears = require('gears')
 local wibox = require('wibox')
 local dpi = require('beautiful').xresources.apply_dpi
 local capi = {button = _G.button}
@@ -154,7 +155,7 @@ local function list_update(w, buttons, label, data, objects)
   end
 end
 local tasklist_buttons =
-  awful.util.table.join(
+  gears.table.join(
   awful.button(
     {},
     1,
