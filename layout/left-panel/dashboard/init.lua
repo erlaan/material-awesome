@@ -5,6 +5,7 @@ local mat_list_item = require('widget.material.list-item')
 local mat_icon = require('widget.material.icon')
 local dpi = require('beautiful').xresources.apply_dpi
 local icons = require('theme.icons')
+local gears = require('gears')
 
 return function(_, panel)
   local search_button =
@@ -24,7 +25,7 @@ return function(_, panel)
   }
 
   search_button:buttons(
-    awful.util.table.join(
+    gears.table.join(
       awful.button(
         {},
         1,
@@ -53,7 +54,7 @@ return function(_, panel)
   }
 
   exit_button:buttons(
-    awful.util.table.join(
+    gears.table.join(
       awful.button(
         {},
         1,

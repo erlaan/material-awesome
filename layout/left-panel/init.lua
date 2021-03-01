@@ -3,6 +3,7 @@ local beautiful = require('beautiful')
 local wibox = require('wibox')
 local apps = require('configuration.apps')
 local dpi = require('beautiful').xresources.apply_dpi
+local gears = require('gears')
 
 local left_panel = function(screen)
   local action_bar_width = dpi(48)
@@ -82,7 +83,7 @@ local left_panel = function(screen)
   end
 
   backdrop:buttons(
-    awful.util.table.join(
+    gears.table.join(
       awful.button(
         {},
         1,

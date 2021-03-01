@@ -39,7 +39,7 @@ local function backdrop(c)
   if not c.backdrop then
     c.backdrop = wibox {ontop = true, bg = '#00000054', type = 'splash'}
     c.backdrop:buttons(
-      awful.util.table.join(
+      gears.table.join(
         awful.button(
           {},
           1,

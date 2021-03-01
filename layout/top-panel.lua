@@ -53,7 +53,7 @@ add_button:buttons(
 local LayoutBox = function(s)
   local layoutBox = clickable_container(awful.widget.layoutbox(s))
   layoutBox:buttons(
-    awful.util.table.join(
+    gears.table.join(
       awful.button(
         {},
         1,
