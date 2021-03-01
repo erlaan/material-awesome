@@ -5,7 +5,7 @@ local top_panel = require('layout.top-panel')
 -- Create a wibox for each screen and add it
 awful.screen.connect_for_each_screen(
   function(s)
-    if s.index == 1 then
+    if s.index == 1 then --If you want the left_panel on a diffrent screen change this! 1 will make it to go to the first screen. 2 will be the second screen!.
       -- Create the left_panel
       s.left_panel = left_panel(s)
       -- Create the Top bar
