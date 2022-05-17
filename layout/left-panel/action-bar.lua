@@ -91,9 +91,9 @@ return function(screen, panel, action_bar_width)
       -- Right widgets
       layout = wibox.layout.fixed.vertical,
       wibox.container.margin(systray, dpi(10), dpi(10)),
-      --require('widget.package-updater'),
-      --require('widget.wifi'),
-      --require('widget.battery'),
+      require('widget.package-updater')[1],
+      require('widget.wifi')[1],
+      require('widget.battery')[1],
       -- Clock
       --clock_widget
     }
