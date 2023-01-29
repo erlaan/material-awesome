@@ -66,6 +66,7 @@ return function(_, panel)
     )
   )
 
+ 
   return wibox.widget {
     layout = wibox.layout.align.vertical,
     {
@@ -82,7 +83,6 @@ return function(_, panel)
         widget = wibox.widget.separator
       },
       require('layout.left-panel.dashboard.quick-settings'),
-      require('layout.left-panel.dashboard.hardware-monitor')[1] --Do not touch. It destoys the desktop. I have no clue why but it works like this!
     },
     layout = wibox.layout.align.vertical,
     {
@@ -96,9 +96,8 @@ return function(_, panel)
         forced_height = 1,
         opacity = 0.08
       },
-      require('layout.left-panel.dashboard.hardware-monitor')
+      require('layout.left-panel.dashboard.hardware-monitor'),
     },
-    nil,
     {
       layout = wibox.layout.fixed.vertical,
       {
@@ -107,5 +106,5 @@ return function(_, panel)
         widget = wibox.container.background
       }
     }
-  }
+  } 
 end
