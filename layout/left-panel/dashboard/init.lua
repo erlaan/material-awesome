@@ -83,6 +83,7 @@ return function(_, panel)
         widget = wibox.widget.separator
       },
       require('layout.left-panel.dashboard.quick-settings'),
+      require('layout.left-panel.dashboard.hardware-monitor')[1],--Do not touch is needed to be. If it's not the desktop not working
     },
     layout = wibox.layout.align.vertical,
     {
@@ -96,7 +97,7 @@ return function(_, panel)
         forced_height = 1,
         opacity = 0.08
       },
-      require('layout.left-panel.dashboard.hardware-monitor'),
+      require('layout.left-panel.dashboard.hardware-monitor'), -- if removed hardware-monitor not working. :D
     },
     {
       layout = wibox.layout.fixed.vertical,
