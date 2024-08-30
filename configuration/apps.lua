@@ -12,8 +12,8 @@ return {
     rofi = rofi_command,
     lock = 'i3lock-fancy',
     quake = 'kitty',
-    screenshot = '~/.config/awesome/configuration/utils/screenshot -m',
-    region_screenshot = '~/.config/awesome/configuration/utils/screenshot -r',
+    screenshot = '~/.config/awesome/configuration/utils/screenshot-full',
+    region_screenshot = '~/.config/awesome/configuration/utils/screenshot-gui',
     delayed_screenshot = 'sleep 10 ; ~/.config/awesome/configuration/utils/screenshot -r',
     
     -- Editing these also edits the default program

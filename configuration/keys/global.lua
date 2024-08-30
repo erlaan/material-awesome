@@ -89,7 +89,7 @@ globalKeys =
     {modkey},
     'Print',
     function()
-      awful.spawn_with_shell(apps.default.delayed_screenshot)
+      awful.spawn.with_shell(apps.default.delayed_screenshot)
     end,
     {description = 'Mark an area and screenshot it 10 seconds later (clipboard)', group = 'screenshots (clipboard)'}
   ),
@@ -97,7 +97,7 @@ globalKeys =
     {},
     'Print',
     function()
-      awful.spawn_with_shell(apps.default.screenshot)
+      awful.spawn.with_shell(apps.default.screenshot)
     end,
     {description = 'Take a screenshot of your active monitor and copy it to clipboard', group = 'screenshots (clipboard)'}
   ),
@@ -105,7 +105,7 @@ globalKeys =
     {'Control'},
     'Print',
     function()
-      awful.spawn_with_shell(apps.default.region_screenshot)
+      awful.spawn.with_shell(apps.default.region_screenshot)
     end,
     {description = 'Mark an area and screenshot it to your clipboard', group = 'screenshots (clipboard)'}
   ),
@@ -353,7 +353,7 @@ globalKeys =
     {'Control',altkey},
     'space',
     function()
-      awful.spawn_with_shell('vm-attach attach')
+      awful.spawn.with_shell('vm-attach attach')
     end
   ),
   -- Emoji picker
